@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -20,12 +21,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.sam.compose.R
 import com.sam.compose.ui.theme.Blue
 import com.sam.compose.ui.theme.White
 
 @Composable
-fun IntroScreen() {
+fun IntroScreen(onExploreButtonClicked: () -> Unit) {
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
@@ -57,15 +59,16 @@ fun IntroScreen() {
                     color = White
                 )
                 Text(
-                    text = "Luxurios \nVacation",
+                    text = "Luxurious \nVacation",
                     style = MaterialTheme.typography.displayMedium,
                     color = White
                 )
 
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { onExploreButtonClicked() },
                     modifier = Modifier
                         .fillMaxWidth()
+                        .height(60.dp)
                         .padding(top = 10.dp),
                     shape = RoundedCornerShape(10.dp),
                     colors = ButtonDefaults.buttonColors(
@@ -75,7 +78,9 @@ fun IntroScreen() {
                 ) {
                     Text(
                         text = "Explore",
-                        style = MaterialTheme.typography.displaySmall,
+                        style = MaterialTheme.typography.displaySmall.copy(
+                            fontSize = 22.sp
+                        ),
                         color = White
                     )
                 }
@@ -89,5 +94,7 @@ fun IntroScreen() {
 @Preview
 @Composable
 fun IntroScreenPreview() {
-    IntroScreen()
+    IntroScreen {
+
+    }
 }

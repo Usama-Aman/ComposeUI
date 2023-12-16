@@ -67,4 +67,8 @@ dependencies {
 
     //Splash Api
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    // Navigation
+    val navVersion = "2.7.6"
+    implementation("androidx.navigation:navigation-compose:$navVersion")
 }
