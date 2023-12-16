@@ -21,7 +21,7 @@ import com.sam.compose.presentation.home.components.recommendedPlaces
 import com.sam.compose.ui.theme.White
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(onItemClicked: () -> Unit) {
 
     val scrollState = rememberScrollState()
 
@@ -49,12 +49,13 @@ fun HomeScreen() {
                 onValueChange = {}
             )
             CategorySection()
-            PopularSection(places = places)
+            PopularSection(places = places, onItemClicked = onItemClicked)
             RecommendedSection(
                 recommendedPlaces = recommendedPlaces,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 10.dp, vertical = 20.dp)
+                    .padding(horizontal = 10.dp, vertical = 20.dp),
+                onItemClicked = onItemClicked
             )
         }
     }
@@ -64,5 +65,5 @@ fun HomeScreen() {
 @Preview
 @Composable
 fun HomeScreenPreview() {
-    HomeScreen()
+    HomeScreen {}
 }

@@ -9,16 +9,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -34,10 +29,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.sam.compose.R
-import com.sam.compose.presentation.home.Places
-import com.sam.compose.presentation.home.places
 import com.sam.compose.ui.theme.Black
-import com.sam.compose.ui.theme.Blue
 import com.sam.compose.ui.theme.Grey
 import com.sam.compose.ui.theme.White
 
@@ -45,6 +37,7 @@ import com.sam.compose.ui.theme.White
 fun RecommendedSection(
     modifier: Modifier = Modifier,
     recommendedPlaces: List<RecommendedPlaces>,
+    onItemClicked: () -> Unit,
 ) {
     Column(
         modifier = modifier
@@ -60,19 +53,20 @@ fun RecommendedSection(
             contentPadding = PaddingValues(10.dp),
         ) {
             items(recommendedPlaces.size) { index ->
-                RecommendedItem(recommendedPlaces[index])
+                RecommendedItem(recommendedPlaces[index], onItemClicked)
             }
         }
     }
 }
 
 @Composable
-fun RecommendedItem(recommendedPlaces: RecommendedPlaces) {
+fun RecommendedItem(recommendedPlaces: RecommendedPlaces, onItemClicked: () -> Unit) {
     Box(
         modifier = Modifier
             .width(200.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(White)
+            .clickable { onItemClicked() }
     ) {
         Column(
             modifier = Modifier
@@ -136,5 +130,5 @@ fun RecommendedItem(recommendedPlaces: RecommendedPlaces) {
 @Preview
 @Composable
 fun RecommendedSectionPreview() {
-    RecommendedSection(recommendedPlaces = recommendedPlaces)
+    RecommendedSection(recommendedPlaces = recommendedPlaces, onItemClicked = { })
 }
