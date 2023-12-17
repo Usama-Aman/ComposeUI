@@ -12,4 +12,4 @@ https://figma.com/file/qo8Vt7bxiZrX8U1pJygczR/Aspen-Travel-App-Exploration--Mobi
 
 ### Here are the Screenshots:
 
-<img src = "Screenshot_20231217_142131.png" width ="200" /> <img src = "Screenshot_20231217_142146.png" width ="200" /> <img src = "Screenshot_20231217_142339.png" width ="200" /> 
+<img src = "Screenshot_20231217_142131.png" width ="200" /> <img src = "Screenshot_20231217_160843.png" width ="200" /> <img src = "Screenshot_20231217_142339.png" width ="200" /> 
