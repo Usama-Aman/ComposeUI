@@ -12,6 +12,4 @@ https://figma.com/file/qo8Vt7bxiZrX8U1pJygczR/Aspen-Travel-App-Exploration--Mobi
 
 ### Here are the Screenshots:
 
-![Screenshot_20231217_142339](https://github.com/Usama-Aman/Travely/assets/30404628/b090794b-5aad-4381-863b-d46f986be599)
-![Screenshot_20231217_142146](https://github.com/Usama-Aman/Travely/assets/30404628/7524489e-01dc-48f2-ba84-5480b742fb1a)
-![Screenshot_20231217_142131](https://github.com/Usama-Aman/Travely/assets/30404628/72fa5b8c-caa1-43e6-b1bf-ef2b502b70df)
+<img src = "Screenshot_20231217_142131.png" width ="500" /> <img src = "Screenshot_20231217_142146.png" width ="500" /> <img src = "Screenshot_20231217_142339.png" width ="500" /> 
