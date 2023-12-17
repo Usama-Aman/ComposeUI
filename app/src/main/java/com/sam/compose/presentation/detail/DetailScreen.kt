@@ -46,7 +46,7 @@ fun DetailScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(White)
-            .padding(top = 20.dp, start = 20.dp, end = 20.dp)
+            .padding(top = 40.dp, start = 20.dp, end = 20.dp)
     ) {
         Column(
             modifier = Modifier
