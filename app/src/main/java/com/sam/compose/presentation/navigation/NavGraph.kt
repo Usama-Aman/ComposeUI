@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.sam.compose.presentation.detail.DetailScreen
 import com.sam.compose.presentation.home.HomeScreen
 import com.sam.compose.presentation.home.places
+import com.sam.compose.presentation.home_navigation.HomeNavigator
 import com.sam.compose.presentation.intro.IntroScreen
 
 @Composable
@@ -18,18 +19,11 @@ fun NavGraph() {
         composable(route = Routes.IntroScreen.route) {
             IntroScreen {
                 navController.popBackStack()
-                navController.navigate(Routes.HomeScreen.route)
+                navController.navigate(Routes.HomeNavigation.route)
             }
         }
-        composable(route = Routes.HomeScreen.route) {
-            HomeScreen {
-                navController.navigate(Routes.DetailScreen.route)
-            }
-        }
-        composable(route = Routes.DetailScreen.route) {
-            DetailScreen(place = places[0]) {
-                navController.navigateUp()
-            }
+        composable(route = Routes.HomeNavigation.route) {
+            HomeNavigator()
         }
     }
 }
