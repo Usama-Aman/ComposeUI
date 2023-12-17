@@ -1,2 +1,6 @@
-# ComposeUI
-In this repo, you will find the UI related work done in compose UI
+# Playing with Compose
+
+Build a simple Travel app UI compose with navigation. 
+
+
+

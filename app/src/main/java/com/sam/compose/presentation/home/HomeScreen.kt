@@ -37,7 +37,7 @@ fun HomeScreen(onItemClicked: () -> Unit) {
         ) {
             HomeTopBar(
                 modifier = Modifier.padding(
-                    top = 50.dp,
+                    top = 30.dp,
                     start = 20.dp, end = 20.dp
                 )
             )
